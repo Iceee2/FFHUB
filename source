@@ -187,7 +187,7 @@ local Button = ExploitTab:CreateButton({
    end,
 })
 
-local ExploitSection = ExploitTab:CreateSection("")
+local ExploitSection = ExploitTab:CreateSection("-------------------")
 
 local Button = ExploitTab:CreateButton({
    Name = "Infinite Lockpick",
@@ -207,5 +207,145 @@ local Button = ExploitTab:CreateButton({
    Name = "Delete Seek (FE)",
    Callback = function()
    -- The function that takes place when the button is pressed
+   end,
+})
+
+local VisualsTab = Window:CreateTab("Visuals", nil) -- Title, Image
+local VisualsSection = VisualsTab:CreateSection("ESP")
+
+local Button = VisualsTab:CreateButton({
+   Name = "Door",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Objetive",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Entity",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Item",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Chest",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Player",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Closet",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Gold",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Guiding Light",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local VisualsSection = VisualsTab:CreateSection("Ambient")
+
+local Button = VisualsTab:CreateButton({
+   Name = "FullBright",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "No Fog",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Anti Lag",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local VisualsSection = VisualsTab:CreateSection("Notifier")
+
+local Button = VisualsTab:CreateButton({
+   Name = "Notify Enity",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Notify Library Code",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Notify Oxygen",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Play Alert Sound",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local VisualsSection = VisualsTab:CreateSection("Self")
+
+local Button = VisualsTab:CreateButton({
+   Name = "Third Person",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Slider = VisualsTab:CreateSlider({
+   Name = "Field Of View",
+   Range = {70, 120},
+   Increment = 1,
+   Suffix = "Field Of View",
+   CurrentValue = 16,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        workspace.CurrentCamera.FieldOfView = (Value)
    end,
 })

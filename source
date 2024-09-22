@@ -1,1 +1,401 @@
-print("blud")
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "coolscript v1",
+   LoadingTitle = "Loading...",
+   LoadingSubtitle = "by 1CE",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+Rayfield:Notify({
+   Title = "coolscript Patched",
+   Content = "coolscript Its patched and its unabailable to use, update soon!",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+
+local MainTab = Window:CreateTab("Main", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Player")
+
+local Slider = MainTab:CreateSlider({
+   Name = "Speed",
+   Range = {0, 100},
+   Increment = 1,
+   Suffix = "Speed",
+   CurrentValue = 16,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "No Acceleration",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Instant Interact",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local MainSection = MainTab:CreateSection("Reach")
+
+local Button = MainTab:CreateButton({
+   Name = "Door Reach",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Prompt Reach",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Slider = MainTab:CreateSlider({
+   Name = "Door Reach Multiplier",
+   Range = {0, 24},
+   Increment = 1,
+   Suffix = "Prompt Reach",
+   CurrentValue = 16,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        print("Patched")
+   end,
+})
+
+local Slider = MainTab:CreateSlider({
+   Name = "Prompt Reach Multiplier",
+   Range = {0, 24},
+   Increment = 1,
+   Suffix = "Prompt Reach",
+   CurrentValue = 16,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        print("Patched")
+   end,
+})
+
+local ExploitTab = Window:CreateTab("Exploits", nil) -- Title, Image
+local ExploitSection = ExploitTab:CreateSection("Anti Entity")
+
+local Button = ExploitTab:CreateButton({
+   Name = "Anti Halt",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = ExploitTab:CreateButton({
+   Name = "Anti Screech",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = ExploitTab:CreateButton({
+   Name = "Anti Dupe",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = ExploitTab:CreateButton({
+   Name = "Anti Eyes",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = ExploitTab:CreateButton({
+   Name = "Anti Snare",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local ExploitSection = ExploitTab:CreateSection("Trolling")
+
+local Button = ExploitTab:CreateButton({
+   Name = "Spam Other Tools",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = ExploitTab:CreateButton({
+   Name = "Upside Down",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = ExploitTab:CreateButton({
+   Name = "Infinite Crucifix",
+   Callback = function()
+        print("Made By 1CE")
+   end,
+})
+
+local ExploitSection = ExploitTab:CreateSection("Bypass")
+
+local Button = ExploitTab:CreateButton({
+   Name = "Speed Bypass",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = ExploitTab:CreateButton({
+   Name = "Bypass Anticheat",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local ExploitSection = ExploitTab:CreateSection("-------------------")
+
+local Button = ExploitTab:CreateButton({
+   Name = "Infinite Lockpick",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = ExploitTab:CreateButton({
+   Name = "Fake Revive",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = ExploitTab:CreateButton({
+   Name = "Delete Seek (FE)",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local VisualsTab = Window:CreateTab("Visuals", nil) -- Title, Image
+local VisualsSection = VisualsTab:CreateSection("ESP")
+
+local Button = VisualsTab:CreateButton({
+   Name = "Door",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Objetive",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Entity",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Item",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Chest",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Player",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Closet",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Gold",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Guiding Light",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local VisualsSection = VisualsTab:CreateSection("Ambient")
+
+local Button = VisualsTab:CreateButton({
+   Name = "FullBright",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "No Fog",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Anti Lag",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local VisualsSection = VisualsTab:CreateSection("Notifier")
+
+local Button = VisualsTab:CreateButton({
+   Name = "Notify Enity",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Notify Library Code",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Notify Oxygen",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Play Alert Sound",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local VisualsSection = VisualsTab:CreateSection("Self")
+
+local Button = VisualsTab:CreateButton({
+   Name = "Third Person",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Slider = VisualsTab:CreateSlider({
+   Name = "Field Of View",
+   Range = {70, 120},
+   Increment = 1,
+   Suffix = "Field Of View",
+   CurrentValue = 16,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        workspace.CurrentCamera.FieldOfView = (Value)
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "No Cutscenes",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VisualsTab:CreateButton({
+   Name = "Translucent Closet",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local FloorTab = Window:CreateTab("Floor", nil) -- Title, Image
+local FloorSection = Tab:CreateSection("Anti Entity")
+
+local Button = FloorTab:CreateButton({
+   Name = "Anti Seek Obstructions",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local FloorSection = Tab:CreateSection("Modifiers")
+
+local Button = FloorTab:CreateButton({
+   Name = "Anti A90",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = FloorTab:CreateButton({
+   Name = "No Jammin",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local UITab = Window:CreateTab("UI Settings", nil) -- Title, Image
+local UISection = Tab:CreateSection("Menu")
+
+local Button = UITab:CreateButton({
+   Name = "Coming Soon...",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})

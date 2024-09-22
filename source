@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "FFHUB",
+   Name = "coolscript v1",
    LoadingTitle = "Loading...",
    LoadingSubtitle = "by 1CE",
    ConfigurationSaving = {
@@ -27,8 +27,8 @@ local Window = Rayfield:CreateWindow({
 })
 
 Rayfield:Notify({
-   Title = "FFHUB Patched",
-   Content = "FFFHUB Its patched and its unabailable to use, update soon!",
+   Title = "coolscript Patched",
+   Content = "coolscript Its patched and its unabailable to use, update soon!",
    Duration = 6.5,
    Image = 4483362458,
    Actions = { -- Notification Buttons
@@ -39,4 +39,173 @@ Rayfield:Notify({
       end
    },
 },
+})
+
+local MainTab = Window:CreateTab("Main", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Player")
+
+local Slider = MainTab:CreateSlider({
+   Name = "Speed",
+   Range = {0, 100},
+   Increment = 1,
+   Suffix = "Speed",
+   CurrentValue = 16,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "No Acceleration",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Instant Interact",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local MainSection = MainTab:CreateSection("Reach")
+
+local Button = MainTab:CreateButton({
+   Name = "Door Reach",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Prompt Reach",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Slider = MainTab:CreateSlider({
+   Name = "Door Reach Multiplier",
+   Range = {0, 24},
+   Increment = 1,
+   Suffix = "Prompt Reach",
+   CurrentValue = 16,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        print("Patched")
+   end,
+})
+
+local Slider = MainTab:CreateSlider({
+   Name = "Prompt Reach Multiplier",
+   Range = {0, 24},
+   Increment = 1,
+   Suffix = "Prompt Reach",
+   CurrentValue = 16,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        print("Patched")
+   end,
+})
+
+local ExploitTab = Window:CreateTab("Exploits", nil) -- Title, Image
+local ExploitSection = ExploitTab:CreateSection("Anti Entity")
+
+local Button = ExploitTab:CreateButton({
+   Name = "Anti Halt",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = ExploitTab:CreateButton({
+   Name = "Anti Screech",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = ExploitTab:CreateButton({
+   Name = "Anti Dupe",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = ExploitTab:CreateButton({
+   Name = "Anti Eyes",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = ExploitTab:CreateButton({
+   Name = "Anti Snare",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local ExploitSection = ExploitTab:CreateSection("Trolling")
+
+local Button = ExploitTab:CreateButton({
+   Name = "Spam Other Tools",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = ExploitTab:CreateButton({
+   Name = "Upside Down",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = ExploitTab:CreateButton({
+   Name = "Infinite Crucifix",
+   Callback = function()
+        print("Made By 1CE")
+   end,
+})
+
+local ExploitSection = ExploitTab:CreateSection("Bypass")
+
+local Button = ExploitTab:CreateButton({
+   Name = "Speed Bypass",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = ExploitTab:CreateButton({
+   Name = "Bypass Anticheat",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local ExploitSection = ExploitTab:CreateSection("")
+
+local Button = ExploitTab:CreateButton({
+   Name = "Infinite Lockpick",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = ExploitTab:CreateButton({
+   Name = "Fake Revive",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = ExploitTab:CreateButton({
+   Name = "Delete Seek (FE)",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
 })
